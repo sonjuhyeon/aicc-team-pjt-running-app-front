@@ -239,13 +239,12 @@ const Detail = () => {
               삭제
             </button>
             <button
-          onClick={handleBack}
-          className="w-full bg-purple-400 py-2 rounded-xl hover:bg-purple-500 hover:shadow-md"
-        >
-          시작하기
-        </button>
+              onClick={handleBack}
+              className="w-full bg-purple-400 py-2 rounded-xl hover:bg-purple-500 hover:shadow-md"
+            >
+              시작하기
+            </button>
           </div>
-          
         ) : (
           <div>
             <button
