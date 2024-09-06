@@ -1,0 +1,23 @@
+.makeCoursePop {
+  position: fixed;
+  bottom: -100vh; /* 팝업창 화면 아래로 숨김 */
+  left: 0px; 
+  width: 390px;
+  height: 93vh;
+  border-right: 2px solid darkgray;
+  color: white;
+  transition: bottom 0.5s ease; /* 슬라이드 애니메이션 */
+}
+
+.makeCoursePop.open {
+  bottom: 0; /* 팝업 화면에 표시 */
+  transition: bottom 0.5s ease; /* 슬라이드 애니메이션 */
+}
+
+.recommendCoursePop.close {
+  display: none;
+}
+
+.recommendCoursePop.closeToday {
+  display: none;
+}
