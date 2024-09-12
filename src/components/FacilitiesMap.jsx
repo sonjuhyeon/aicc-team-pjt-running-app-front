@@ -59,7 +59,7 @@ const FacilitiesMap = () => {
 
   useEffect(() => {
     axios
-      .get("https://runningapp.microdeveloper.co.kr/get_facilities")
+      .get(`${process.env.REACT_APP_MY_DOMAIN}/get_facilities`)
       .then((res) => {
         // console.log(res);
         if (res.status === 200) {
