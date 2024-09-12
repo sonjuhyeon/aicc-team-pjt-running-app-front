@@ -59,7 +59,7 @@ const FacilitiesMap = () => {
 
   useEffect(() => {
     axios
-      .get("https://aiccrunningapp.microdeveloper.co.kr/get_facilities")
+      .get("https://runningapp.microdeveloper.co.kr/get_facilities")
       .then((res) => {
         // console.log(res);
         if (res.status === 200) {

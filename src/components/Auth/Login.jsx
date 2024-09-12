@@ -33,7 +33,7 @@ const Login = () => {
       return;
     }
     axios
-      .post("https://aiccrunningapp.microdeveloper.co.kr/login", values)
+      .post("https://runningapp.microdeveloper.co.kr/login", values)
       .then((res) => {
         if (res.status === 201) {
           const decoded = jwtDecode(res.data.token);
@@ -42,7 +42,7 @@ const Login = () => {
 
           axios
             .get(
-              `https://aiccrunningapp.microdeveloper.co.kr/get_user/${decoded["name"]}`
+              `https://runningapp.microdeveloper.co.kr/get_user/${decoded["name"]}`
             )
             .then((res) => {
               if (res.status === 200) {

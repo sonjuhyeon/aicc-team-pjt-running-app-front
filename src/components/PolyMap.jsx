@@ -206,9 +206,7 @@ const PolyMap = () => {
     e.preventDefault();
 
     axios
-      .get(
-        "https://aiccrunningapp.microdeveloper.co.kr/get_course?isVisible=true"
-      )
+      .get("https://runningapp.microdeveloper.co.kr/get_course?isVisible=true")
       .then((res) => {
         // console.log(res);
         if (res.status === 200) {
@@ -243,7 +241,7 @@ const PolyMap = () => {
     }
 
     axios
-      .post("https://aiccrunningapp.microdeveloper.co.kr/make_course", values)
+      .post("https://runningapp.microdeveloper.co.kr/make_course", values)
       .then((res) => {
         console.log(res);
         if (res.status === 201) {

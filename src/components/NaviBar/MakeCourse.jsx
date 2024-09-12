@@ -80,10 +80,7 @@ const MakeCourse = () => {
     formData.append("file", uploadFile);
     // console.log('uploadFile', uploadFile);
     axios
-      .post(
-        "https://aiccrunningapp.microdeveloper.co.kr/upload_image",
-        formData
-      )
+      .post("https://runningapp.microdeveloper.co.kr/upload_image", formData)
       .then((res) => {
         setUploadImgUrl(res.data.url);
         setValues({ ...values, url: res.data.url });
@@ -391,7 +388,7 @@ const MakeCourse = () => {
     }
 
     axios
-      .post("https://aiccrunningapp.microdeveloper.co.kr/make_course", values)
+      .post("https://runningapp.microdeveloper.co.kr/make_course", values)
       .then((res) => {
         console.log(res);
         if (res.status === 201) {
