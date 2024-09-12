@@ -104,7 +104,7 @@ const Register = () => {
     }
 
     axios
-      .post("http://localhost:8080/register", values)
+      .post("https://aiccrunningapp.microdeveloper.co.kr/register", values)
       .then((res) => {
         if (res.status === 201) {
           toast.success("회원가입 되었습니다.");

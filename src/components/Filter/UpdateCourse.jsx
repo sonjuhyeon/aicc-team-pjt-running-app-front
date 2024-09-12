@@ -125,7 +125,10 @@ const UpdateCourse = () => {
     formData.append("file", uploadFile);
     // console.log('uploadFile', uploadFile);
     axios
-      .post("http://localhost:8080/upload_image", formData)
+      .post(
+        "https://aiccrunningapp.microdeveloper.co.kr/upload_image",
+        formData
+      )
       .then((res) => {
         setUploadImgUrl(res.data.url);
         setValues({ ...values, url: res.data.url });
