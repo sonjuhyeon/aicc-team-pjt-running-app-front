@@ -140,6 +140,7 @@ const Detail = () => {
         await dispatch(fetchDeleteCourse(detail.course_id)).unwrap();
         toast.success("아이템이 삭제되었습니다.");
         navigate("/box");
+        window.location.reload();
       } catch (error) {
         toast.error("아이템 삭제에 실패했습니다.");
         console.error(error);
@@ -147,18 +148,23 @@ const Detail = () => {
     }
   };
 
-  const handleBack = () => window.history.back();
+  const handleBack = () => {
+    window.history.back();
+    setTimeout(function () {
+      window.location.reload();
+    }, 50);
+  };
 
   return (
     <div className="detail relative overflow-hidden">
       <div
         id="map"
-        className="relative"
-        style={{ width: "400px", height: "500px" }}
+        className="relative top-[48px]"
+        style={{ width: "100%", height: "500px" }}
       />
 
       <div className="detail-wrapper">
-        <div className="fixed top-0 left-0 w-full h-auto z-10">
+        <div className="fixed top-0 left-0 w-full h-[48px] z-10">
           <div className="detail-header">
             <button onClick={handleBack} className="fixed left-[1rem]">
               <ChevronLeft className="w-[2.5rem] h-[2.5rem]" />

@@ -23,11 +23,10 @@ const Category = ({ title }) => {
   const ct_options = city_options;
 
   useEffect(() => {
-    dispatch(fetchGetUsersData());
+    setLoading(true);
     const fetchGetCourse = async () => {
       try {
         await dispatch(fetchGetUsersJoinCourseData()).unwrap();
-        setLoading(true);
       } catch (error) {
         console.log("Failed to fetch items:", error);
       } finally {
@@ -126,7 +125,7 @@ const Category = ({ title }) => {
           </div>
         )}
       </div>
-      <div className="search-content overflow-x-scroll">
+      <div className="search-content">
         {title === "거리별 코스" && (
           <div className="flex justify-between px-4 gap-4">
             <button
@@ -155,16 +154,19 @@ const Category = ({ title }) => {
             </button>
           </div>
         )}
-        <div className="flex w-full text-violet-300">
+        <div className="flex w-full text-violet-300 overflow-x-scroll">
           {loading ? (
             <SkeletonTheme baseColor="#ddd6fe" highlightColor="#c4b5fd">
               <ItemLoadingSkeleton></ItemLoadingSkeleton>
               <ItemLoadingSkeleton></ItemLoadingSkeleton>
+              <ItemLoadingSkeleton></ItemLoadingSkeleton>
+              <ItemLoadingSkeleton></ItemLoadingSkeleton>
+              <ItemLoadingSkeleton></ItemLoadingSkeleton>
             </SkeletonTheme>
           ) : (
-            showCourse?.map((item, idx) => (
-              <div className="category-items w-[195px]">
-                <Item key={idx} item={item}></Item>
+            showCourse?.map((item) => (
+              <div className="category-items w-[195px] xs:basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5 basis-1/6">
+                <Item key={item.course_id} item={item}></Item>
               </div>
             ))
           )}
