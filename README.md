@@ -73,7 +73,12 @@ npm start
 ---
 
 ### 7. 아키텍쳐
+- Components Structure
 <img width="934" alt="Components_Structure" src="https://github.com/user-attachments/assets/41dcf8cd-f0f8-4e2a-a3ed-67a6fbaf3675">
+
+---
+
+### 8. 버그 및 디버그
 
 ---
 
