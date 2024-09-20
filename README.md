@@ -11,19 +11,23 @@
 - 김민식(팀장)
   - kakao map api를 이용하여 맵과 관련된 핵심 기능들을 구현
   - 의뢰받은 팀과의 커뮤니케이션, 조율 등 프로젝트 전반을 관리
+  - [민식님의 깃헙](https://github.com/Noveled)
+  - [민식님의 블로그](https://siina.tistory.com)
 - 손주현(팀원, 본인)
   - 로그인, 로그아웃 기능 구현
   - 추천코스, 보관함 기능 및 UI 구현
+  - [나의 블로그](https://velog.io/@homeless_snail/posts)
 - 강민주(팀원)
   - 마이페이지 구현
   - 프로젝트의 전반적인 디자인 구성
+  - [민주님의 깃헙](https://github.com/mjk2024-dementia)
 
 ---
 
 ### 2. 프로젝트에 사용한 기술
-- FrontEnd: JavaScript, React
-- BackEnd: Node.js
-- DB: postgreSql
+<img src="https://img.shields.io/badge/JavaScript-black?style=for-the-badge&logo=JavaScript&logoColor={로고 색깔}"/> <img src="https://img.shields.io/badge/React-black?style=for-the-badge&logo=react&logoColor={로고 색깔}"/><br>
+<img src="https://img.shields.io/badge/Node.js-black?style=for-the-badge&logo=nodedotjs&logoColor={로고 색깔}"/><br>
+<img src="https://img.shields.io/badge/PostgreSQL-black?style=for-the-badge&logo=postgresql&logoColor={로고 색깔}"/>
 
 ---
 
@@ -78,7 +82,17 @@ npm start
 
 ---
 
-### 8. 버그 및 디버그
+### 8. 수정해야할 사항
+- 근처추천코스 -> 현재위치를 기준으로 출발지와 가까운 순으로 정렬
+- 지역추천코스 -> 조회수 순으로 정렬
+- 산책추천코스 -> 3km 미만, 조회수 순으로 정렬
+
+---
+
+### 9. 버그 및 디버그
+- 코스 수정 시 거리가 0km로 초기화 됨
+- 코스 thumbnail을 변경하고 싶을 때 waypoint를 다시 찍어야 thumbnail이 변경 됨
+- 브라우저 창에서 뒤로가기나 앞으로 가기 할 때 하단 내비게이션 적용 안됨
 
 ---
 
