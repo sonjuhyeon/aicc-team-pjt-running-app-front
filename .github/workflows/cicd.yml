@@ -31,5 +31,7 @@ jobs:
         run: docker pull sonjuhyeon00/aicc-teampjt-runningapp:latest
       - name: Delete existing container
         run: docker rm -f reactContainer
+      - name: Delete cache in ec2 linux
+        run: docker system prune -a -f
       - name: Run container
         run: docker run -d -p 80:80 --name reactContainer sonjuhyeon00/aicc-teampjt-runningapp
