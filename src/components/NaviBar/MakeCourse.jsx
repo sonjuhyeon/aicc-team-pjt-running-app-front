@@ -192,9 +192,7 @@ const MakeCourse = () => {
   // 로그인 여부 체크 겸 유저 id 미리 집어넣기
   useEffect(() => {
     if (userData.userInfo === null) {
-      if (window.location.pathname !== "/login") {
-        toast.error("로그인이 필요한 서비스입니다.");
-      }
+      toast.error("로그인이 필요한 서비스입니다.");
       navigate("/login");
       return;
     }
