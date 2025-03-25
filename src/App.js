@@ -37,6 +37,7 @@ function App() {
 
           <Route path="/detail" element={<Detail />} />
           <Route path="/main" element={<Main />} />
+
           {/* 기능 구현 테스트 페이지 */}
           <Route path="/polyMap" element={<PolyMap />} />
           <Route path="/directMap" element={<DirectionMap />} />

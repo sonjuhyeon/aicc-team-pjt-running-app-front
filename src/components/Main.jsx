@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Recommend from "./Recommend";
 import FooterNaviBar from "./NaviBar/FooterNaviBar";
 import MapBase from "./MapBase";
 
@@ -28,8 +27,6 @@ const Main = () => {
   return (
     <div className="main relative w-full h-[100vh] overflow-hidden">
       <div className="h-[93vh]">
-        {/* 상단에 오늘의 추천 코스 보여주기 */}
-        {/* <Recommend></Recommend> */}
         <div className="mapContainer overflow-hidden h-full w-full">
           <MapBase />
           {/* 

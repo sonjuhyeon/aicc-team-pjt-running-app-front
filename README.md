@@ -47,7 +47,7 @@
 ---
 
 ### 5. 프로젝트 배포
-- [프로젝트 배포 사이트(Running Hi)](https://aiccrunningapp.microdeveloper.co.kr)
+- [프로젝트 배포 사이트(Running Hi)](https://runninghifront.microdeveloper.co.kr)
 - [배포과정 정리](https://velog.io/@homeless_snail/deploy-process1)
 
 ---

@@ -137,7 +137,16 @@ const MapBase = () => {
         // 지도 중심좌표를 얻어옵니다
         const latlng = map.getCenter();
         const mapLv = map.getLevel();
-        dispatch(changeMapInfo({ center: latlng, lv: mapLv }));
+
+        dispatch(
+          changeMapInfo({
+            center: {
+              lat: latlng.getLat(),
+              lng: latlng.getLng(),
+            },
+            lv: mapLv,
+          })
+        );
       });
     }
   }, [map]);
